@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <style>
+            #menu{
+                background-color: cyan;
+                background-image:linear-gradient(to right, cyan , aquamarine);
+                padding: 0;
+                margin: 0;
+                list-style:none;
+            }
+            #menu ul li {
+                display: inline-block;
+            }
+            #menu ul li a{
+                color: white;
+                display: block;
+                padding: 14px 14px;
+                text-decoration: none;
+            }
+            #menu li ul {
+                display: none;
+                position: absolute;
+            }
+            #menu li:hover > ul {
+                display: block;
+            }
+            #menu ul li a img{
+                width: 18px;
+                height: 18px;
+            }
+            #menu ul li a:hover{
+                background-color: cyan;
+            }
+            .box{
+                width: 1110px;
+                height: 50px;
+                margin: 0 auto;
+                background-color: cyan;
+                background-image:linear-gradient(to right, cyan , aquamarine);
+                text-align: center;
+                color: white;
+                margin: 0 auto;
+                padding: 0;
+                border: 0;
+            }
+            .box2{
+                width: 1080px;
+                height: 700px;
+                margin: 0 auto;
+                text-align: center;
+                color: white;
+                background-image: url(http://limpiezaslince.com/wp-content/uploads/2014/04/45378762.jpg);
+                background-size: 100% 100%;
+                align-content: center;
+                position:relative;
+                left:0px;
+                bottom:0px;
+                padding: 15px;
+                border: 0;
+                z-index:-1;
+            }
+            .pl{
+                float: left;
+            }
+            .caja1{
+                width: 350px;
+            }
+            .caja2{
+                width: 680px;
+            }
+            .centrar{
+                position: relative;
+                top: 350px;
+            }
+            .btn{
+                background: transparent;
+                color: white;
+                border-radius: 15px;
+                border: 1px solid white;
+                width: 120px;
+                height: 30px;
+            }
+            .btna{
+                background: cyan;
+                color: white;
+                border-radius: 15px;
+                border: 1px solid cyan;
+                width: 120px;
+                height: 30px;
+            }
+ 
+            .box-gray{
+                background-color: #F5F5F5; 
+                color: "black";
+                margin: 0 auto;
+                padding: 15px;
+                border: 0;
+                width: 1080px;
+                height: 1080px;
+                position:relative;
+                top:0px;
+            }
+            .box-portfolio{
+                background-color:white; 
+                color: "black";
+                margin: 0 auto;
+                padding: 15px;
+                border: 0;
+                width: 1080px;
+                height: 1080px;
+            }
+            .box-footer{
+                background-color:white; 
+                color: "black";
+                margin: 0 auto;
+                padding: 15px;
+                border: 0;
+                width: 1080px;
+                height: 300px;
+            }
+            .box-newsletter{
+                background-color:white;
+                color:"black";
+                margin:0 auto;
+                padding: 15px;
+                border:0;
+                width: 1080px;
+                height: 200px;
+            }
+            .box-temp{
+                color: "black";
+                margin: 0 auto;
+                padding: 15px;
+                border: 0;
+                width: 1080px;
+                position:relative;
+                right:222px;
+                top:45px
+            }
+            .box-text{
+                position: relative;
+                width:400px;
+                border:0;
+                /*padding-top: 50px;*/
+                margin-top: 8%;
+                margin-bottom:1%;
+                text-align:center
+                }
+            .box-text2{
+                position: relative;
+                width:400px;
+                border:0;
+                /*padding-top: 50px;*/
+                margin-top: 2%;
+                margin-bottom:2%;
+                text-align:center
+                }
+            .box-text3{
+                position: relative;
+                width:420px;
+                border:0;
+                /*padding-top: 50px;*/
+                margin-top: 2%;
+                margin-bottom:2%;
+                text-align:center
+                }
+            .box-text4{
+                position: relative;
+                width:100%;
+                border:0;
+                /*padding-top: 50px;*/
+                margin-top: 2%;
+                margin-bottom:2%;
+                text-align:left;
+                border:4;                
+                }
+            .center{
+                margin-left:auto;
+                margin-right:auto
+            }
+            .text-style1 {
+                font-size: 2em;
+                font-family:Poppins, sans-serif, Arial, Helvetica;
+                text-align:center;
+                font-weight: 600
+            }
+            .text-style2{
+                font-size: 1em;
+                font-family:Poppins,sans-serif, Arial, Helvetica;
+                font-weight:normal
+            }
+            .text-style3{
+                font-size:1em;
+                font-family:Poppins,sans-serif, Arial, Helvetica;
+                font-weight:bold;
+                color:black
+            }
+            .text-style4 {
+                font-size: 1.5em;
+                font-family:Poppins,sans-serif, Arial, Helvetica;
+                text-align:center;
+                /*font-weight: 700*/
+            }
+            .text-style8 {
+                font-size: 1.5em;
+                font-family:Poppins,sans-serif, Arial, Helvetica;
+                text-align:center;
+                font-weight: bold;
+            }
+            .text-style10 {
+                font-size: 1.5em;
+                font-family:Poppins,sans-serif, Arial, Helvetica;
+                /*text-align:center;*/
+                font-weight: bold;
+                margin-top:0;
+            }
+            .text-style11 {
+                font-size: 1em;
+                font-family:Poppins,sans-serif, Arial, Helvetica;
+                /*text-align:center;*/
+                font-weight: bold;
+                color:gray;
+                margin-top:0;
+            }
+            .text-style5{
+                font-size:1em;
+                font-family:Poppins, sans-serif, Arial, Helvetica;
+                font-weight:normal;
+                color:black
+            }
+            .text-style6 {
+                font-size: 1em;
+                font-family:Poppins,sans-serif, Arial, Helvetica;
+                font-weight:bold;
+                text-align:center;
+            }
+            .text-style7 {
+                font-size: 1em;
+                font-family:Poppins, sans-serif, Arial, Helvetica;
+                font-weight:normal;
+                text-align:center;
+                color:gray
+            }
+            .text-style9 {
+                font-size: 10px;
+                font-family:Poppins, sans-serif, Arial, Helvetica;
+                font-weight:normal;
+                text-align:left;
+                color:gray
+            }
+            .div_line_top{
+                border-top: 1px solid gray;
+                padding-top:10px;
+            }
+            span.big {
+                display: inline-block; 
+                width: 500px;
+                /*height: 500px;*/
+                padding: 5px;
+                border: 0;   
+            }
+            span.big2 {
+                display: block; 
+                /*width: 50px;*/
+                /*height: 500px;*/
+                height: 50%;
+                padding: 5px;
+                border: 0;   
+            }
+            span.big3 {
+                display: inline-block; 
+                width: 500px;
+                /*height: 500px;*/
+                padding: 5px;
+                border: 0;   
+                text-align: top;
+                position:relative;
+                top:0;
+            }
+            span.footercol {
+                display: inline-block; 
+                width: 23%;
+                /*height: 500px;*/
+                padding: 0;
+                border: 0;   
+                text-align: center;
+                position:relative;
+                top:0;
+            }
+            span.small-image{
+                display: inline-block;
+                width: 80px;
+                padding:10px;
+                border:0;
+            }
+            span.small-text{
+                display: inline-block;
+                width: 300px;
+                padding: 5px;
+                border:0
+            }
+            .topnav {
+                overflow: hidden;
+                align-content: center;
+                margin:0;
+                padding:0;
+                display:inline-block
+            }
+            .topnav a {
+                float:left;
+                color:black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                border-bottom: 3px solid transparent;
+                text-align: center;
+            }
+            .topnav a:hover {
+                border-bottom: 3px solid cyan;
+                color:cyan
+            }
+            .topnav a.active {
+                border-bottom: 3px solid cyan;
+            }
+            .nav_box{
+                position:relative;
+                width: 700px
+            }
+            span.colimage{ 
+                display: inline-block; 
+                width: 310px;
+                /*height: 500px;*/
+                padding: 10px;
+                border: 0; 
+            }
+            span.rowimage{
+                display:block;
+                height:38%;
+                padding:2%;
+                border:0
+            }
+            span.textimage{
+                display:block;
+                height:9.5%;
+                padding:0.5%;
+                border:0
+            }
+            .box_pricing{
+                background-color: #F5F5F5; 
+                color: "black";
+                margin: 0;
+                padding: 15px;
+                border: 0;
+                width: 1080px;
+                height: 800px;
+            }
+            .box_testimonial{
+                background-color:#F5F5F5; 
+                color: "black";
+                margin: 0;
+                padding: 15px;
+                border: 0;
+                width: 1080px;
+                height: 700px;
+            }
+            span.priceimage{ 
+                display: inline-block; 
+                width: 310px;
+                /*height: 500px;*/
+                padding: 10px;
+                border: 0;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+                background-color: white;
+                border-radius: 12px;
+                margin-left:2%
+            }
+            span.updatetext{
+                display: inline-block;
+                width:40%;
+                padding: 20px;
+                border: 0;
+                height: 100%
+            }
+            span.complogoinline{
+                display: inline-block;
+                width:13%;
+                padding: 1%;
+                border: 0;
+                /*height: 10%;*/
+                margin-left:1%
+                
+            }
+            span.titlelogo{
+                display: inline-block;
+                width:20%;
+                padding: 10px;
+                border: 0;
+                /*height: 100%*/
+            }
+            span.titlelogo1{
+                display: inline-block;
+                width:70%;
+                padding: 10px;
+                border: 0;
+                /*height: 100%*/
+            }
+
+            span.updateletter{
+                display: inline-block;
+                width:60%;
+                padding: 20px;
+                border: 0;
+                height: 100%;
+                position:relative;
+                left:600px;
+                bottom: 100px
+            }
+            ul.check {
+                list-style-image: url('check.png');
+            }
+            p.space{
+                margin-bottom:1.5em
+            }
+            p.space1{
+                margin-top:3em;
+                margin-bottom:1.5em;
+                text-align: center;
+            }
+            p.space2{
+                margin-top:1em;
+                margin-bottom:1.5em;
+                text-align: left;
+                margin-left:5%;
+            }
+            .button {
+                background-color: cyan; /* Green */
+                background-image:linear-gradient(to right, cyan , aquamarine);
+                border: none;
+                color: white;
+                padding: 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 30px;
+                width:60%;
+                left:20%;
+                position:relative
+            }
+            .left{
+                margin-left:2%
+            }
+            .left2{
+                float:left;
+                margin-left:10%
+            }
+            .simple-subscription-form {
+                color: #fefefe;
+                padding: 2rem;
+                border-radius: 0;
+            }
+            .simple-subscription-form .button {
+                margin-bottom: 0;
+                background-color: cyan; /* Green */
+                background-image:linear-gradient(to right, cyan , aquamarine);
+                border: none;
+                color: white;
+                padding: 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 30px;
+                width:20%;
+                left:20%;
+                position:relative
+            }
+            span.testimage{ 
+                display: inline-block; 
+                width: 310px;
+                /*height: 500px;*/
+                padding: 10px;
+                border: 0;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+                background-color: white;
+                border-radius: 0;
+                margin-left:2%;
+                margin-top:2%;
+                align-content: center;
+            }
+            .box-complogo{
+                background-color:white;
+                color:"black";
+                margin:0 auto;
+                padding: 15px;
+                border:0;
+                width: 1080px;
+                height: 200px;
+            }
+            /* Full-width input fields */
+            input[type=text] {
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                display: inline-block;
+                border: none;
+                background: #f1f1f1;
+                }
+            input[type=message] {
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                display: inline-block;
+                border: none;
+                background: #f1f1f1;
+                height: 100px
+                }
+            input[type=text]:focus, input[type=message]:focus {
+                background-color: #ddd;
+                outline: black ;
+            }
+            hr {
+                border: 1px solid #f1f1f1;
+                margin-bottom: 25px;
+            }
+            .signbutton {
+                background-color: cyan; /* Green */
+                background-image:linear-gradient(to right, cyan , aquamarine);
+                border: none;
+                color: white;
+                padding: 14px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 14px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 30px;
+                width:20%;
+                left:0;
+                position:relative
+            }
+            .navlist li:nth-child(1){
+                list-style-image:url('email1.png');
+            }
+            .navlist li:nth-child(2){
+                list-style-image:url('email2.png');
+            }
+            .navlist li:nth-child(3){
+                list-style-image:url('email3.png');
+            }
+            .icon {
+                padding: 10px;
+                color: gray;
+                min-width: 50px;
+                text-align: center;
+            }
+            span.final{
+                display: block; 
+                width: 1080px;
+                height: 800px;
+                /*height: 500px;*/
+                /*height: 50%;*/
+                padding: 5px;
+                border: 0;  
+            }
+            /*top2{
+                position:relative;
+                right:40px
+            }*/
+            .flexContainer {
+                display: flex;
+            }
+            .inputField {
+                flex: 1;
+            }
+            .cm{
+                width:18px;
+                position: relative;
+                right:55px;
+            }
+        </style>
+    </head>
+    <body>
+        <span class="final center"> 
+                <div class="center">
+                        <div class="box center">
+                            <div class="box pl caja1 center">
+                                <span class="titlelogo "><image src="logo.png"></image></span>
+                                <span class="titlelogo1 center text-style1">SMART</span>
+                            </div>
+                            <div id="menu">
+                                <ul>
+                                    <li><a href="#Home" > HOME </a></li>
+                                    <li><a href="#About"> ABOUT</a></li>
+                                    <li><a href="#Portfolio"> PORTFOLIO </a></li>
+                                    <li><a href="#Pricing"> PRICING </a></li>
+                                    <li><a href="#Client"> CLIENT </a></li>
+                                    <li><a href="#Contact"> CONTACT </a></li>
+                                    <li><a> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ8AAAC6CAMAAACHgTh+AAAA
+                                        aVBMVEX///9EiMyzyufq8Pja5fOcu+AygMksfsg6hMrG1uw4gspAhsv7/f7g6/dSkM9EicyJsNyRtd5TkdD2+v13
+                                        p9laldHn8PmAq9pkmtO60uuuyufw9fvP4PHK2++lwuRel9Jsoti+1e2oxuZi/ByQAAACvUlEQVR4nO3d626bQBCG
+                                        YbDB3XjBsJzPkNz/RRZSVa17SKV6EBnrfWTlRxLF2k+L7SUzu54HAAAAAAAAAAAAAACeyjkY25M27Rj0u6SRj64o7VU
+                                        Z45eFG3P5OOKpNMbXyJh5isXjSH179MD+m/VdJRtH5BTHsUrCSDSPNlMdh2/LV8k4+kJ3HGsgteS7zDirz6MZBPPobur
+                                        zyDrBPFxy9HgeloSCeaTap8c6QZxgHqH6+WGTSTCPtlQ/QcpWMI+h0Z6H7PtLlB49noc50Q+ogfIPIKYJJOPwvDfVn0D
+                                        sTfLVY5O/JTpX+xtz62SXc1sgw2KuVt8ksfZqlmGHG0JR37rFftHGX8LXXnx2fEsk78/69Pk+aQAAAAAAAAAAAAAAPov8HA
+                                        f6xP0OxQ6rqOrSxl608RvXVTv8h79/aYxRWQ9jzDKKt4z1oeZ6qWSSvmamRN/U+MFKF5AN6ustJctxvbw+ekAPSyWvGOq173XK
+                                        2+e2BjrJilz9/R70A/1CtB/IHT0aAZLz4xleP06CefD+cq+v1eeRii5hRuUNdHYeJePwolD5+mUSXvJXTnEgNgnFF/zVaTZGYyTWm
+                                        OZ0lo5jvWSCsJ7t5XK9Xq7vX35+/PaNP/3KX3/w4ePff/fDp/Pnegr26YDp42F80WYc4n32UwIAAAAAAAAAAAAAfB6RRrulMU4q9
+                                        z+dZEulvou17o9rTCF+PJDndZr7gcS3k1Z+wofwcTjrxdLonR0bs8heMqn2BodEspz/Geq1F8kN+p/hfA/JVxDd1ckb2fNf6Ae6Rz/
+                                        QPd2ne2zsTfJ8Mc6fu1cVR4/nYYVoSX93O3o8j7GZ7Aom13zc6/uBr8IbPAS14kCsn4qv+AOXWYW3P7YbIDYLd7gBkrf1klmjjc2Wut
+                                        1nB6FqOE2hNlM7CJ8VDQAAAAAAAAAAAAAAAADAs/sKHVJ7GF5H7D4AAAAASUVORK5CYII=" style="margin-top:20%; margin-left:30%"> </a>
+                                        <ul>
+                                            <div class="cm">
+                                                <li><a href="#Home"> HOME </a></li>
+                                                <li><a href="#About"> ABOUT</a></li>
+                                                <li><a href="#Portfolio"> PORTFOLIO </a></li>
+                                                <li><a href="#Pricing"> PRICING </a></li>
+                                                <li><a href="#Client"> CLIENT </a></li>
+                                                <li><a href= "#Contact"> CONTACT </a></li>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="box2 pl" >
+                            <div class="centrar">
+                                <a name="Home"></a>
+                                <h1 class="text-style1"> Multi-purpose Landing <br> Page Template <br>
+                                    <button button class="btna" >
+                                        GET STARTED
+                                   </button>
+                                   <button class="btn">
+                                        DOWNLOAD
+                                   </button>
+                                </h1>
+                            </div>
+                        </div>
+                </div>
+            </span>
+            <span class="final center">
+                    <div class="box-gray center">
+                            <a name="About"></a>
+                            <img  src="work1.png" style="margin-top:20%; margin-left:30%">
+                            <div class="box-text center text-style1">
+                                The future of designing starts here
+                            </div>
+                            <div class="box-text2 center text-style2">
+                                An open platform for presentations and content collaboration. Sign up to get early access.
+                            </div>
+                            <span class="big center">
+                                <span class="big2 center">
+                                    <span class ="small-image center">
+                                            <img src= "small1.png">
+                                    </span>
+                                    <span class="small-text center" >
+                                        <p class="text-style3">Powerful templates</p> 
+                                        Poorly designed presentations are a thing of past. Create beautiful and high quality content that is aligned
+                                    </span>
+                                </span>        
+                                <span class="big2 center">
+                                    <span class="small-image center">
+                                            <img src = "small2.png">
+                                    </span>
+                                    <span class="small-text center">
+                                            <p class="text-style3">Work anywhere</p> 
+                                            Poorly designed presentations are a thing of past. Create beautiful and high quality content that is aligned
+                                    </span>
+                                </span>
+                            </span>
+                            <span class="big center">
+                                <span class="big2 center">
+                                        <span class="small-image center">
+                                                <img src = "small3.png">
+                                        </span>
+                                        <span class="small-text center">
+                                                <p class="text-style3">Designed for anyone</p> 
+                                                Poorly designed presentations are a thing of past. Create beautiful and high quality content that is aligned
+                                        </span>
+                                </span>
+                                <span class= "big2 center">
+                                        <span class="small-image center">
+                                                <img src = "small4.png">
+                                        </span>
+                                        <span class="small-text center">
+                                                <p class="text-style3">Updated in real time</p> 
+                                                Poorly designed presentations are a thing of past. Create beautiful and high quality content that is aligned
+                                        </span>
+                                </span>       
+                            </span>
+                            </div>
+                            <div class="box-portfolio">
+                                    <a name="Portfolio"></a>
+                                    <h3 class="center text-style1"> Our portfolio</h3>
+                                    <div class="box-text3 center"> Stop wasting time and money designing and managing a website that doesn't get results. Happiness guaranteed! </div>
+                                    <div class="nav_box center">
+                                        <div class="topnav">
+                                            <a class="active text-style3" href="#home">ALL WORK</a>
+                                            <a class="text-style3" href="#branding">BRANDING</a>
+                                            <a class="text-style3"href="marketing">MARKETING</a>
+                                            <a class="text-style3" href="planning">PLANNING</a>
+                                            <a class="text-style3" href="research">RESEARCH</a>
+                                        </div> 
+                                    </div>
+                                    <span class=" colimage left"> 
+                                        <span class="rowimage">
+                                            <img src="port1.png">
+                                        </span>
+                                        <span class="textimage">
+                                            <p class="text-style3">Graphics Design</p> 
+                                            Short description for the ones who look for something new. Awesome!
+                                        </span>
+                                        <span class="rowimage">
+                                            <img src="port4.png">
+                                        </span>
+                                        <span class="textimage">
+                                            <p class="text-style3">Graphics Design</p> 
+                                            Short description for the ones who look for something new. Awesome!
+                                        </span>
+                                    </span>
+                                    <span class=" colimage left">
+                                        <span class="rowimage">
+                                            <img src="port2.png">
+                                        </span>
+                                        <span class="textimage">
+                                            <p class="text-style3">Graphics Design</p> 
+                                            Short description for the ones who look for something new. Awesome!
+                                        </span>
+                                        <span class="rowimage">
+                                            <img src="port5.png">
+                                        </span>
+                                        <span class="textimage">
+                                            <p class="text-style3">Graphics Design</p> 
+                                            Short description for the ones who look for something new. Awesome!
+                                        </span> 
+                                    </span>
+                                    <span class=" colimage left"> 
+                                        <span class="rowimage">
+                                            <img src="port3.png">
+                                        </span>
+                                        <span class="textimage">
+                                            <p class="text-style3">Graphics Design</p> 
+                                            Short description for the ones who look for something new. Awesome!
+                                        </span>
+                                        <span class="rowimage">
+                                            <img src="port6.png">
+                                        </span>
+                                        <span class="textimage">
+                                            <p class="text-style3">Graphics Design</p> 
+                                             Short description for the ones who look for something new. Awesome!
+                                        </span> 
+                                    </span>
+                                    <div class="box_pricing">
+                                            <a name="Pricing"></a>
+                                            <h3 class="center text-style1"> Pricing Plan</h3>
+                                            <div class="box-text3 center text-style5"> Stop wasting time and money designing and managing a website that doesn't get results. Happiness guaranteed! </div>
+                                            <span class="priceimage center">
+                                                <image src="price1.png" style="margin-left:12.5%"></image>
+                                                <h3 Class="center text-style4">Basic</h3>
+                                                <p class="space center text-style4"><strong>$ 199</strong>/month</p>
+                                                <ul class='check text-style5'>
+                                                    <li>Carefully crafted components</li>
+                                                    <li>Amazing page examples</li>
+                                                </ul>
+                                                <button class="button">GET STARTED</button>
+                                            </span>
+                                            <span class="priceimage">
+                                                <image src="price1.png" style="margin-left:12.5%"></image>
+                                                <h3 Class="center text-style4">Pro</h3>
+                                                <p class="space center text-style4"><strong>$ 299</strong>/month</p>
+                                                <ul class='check text-style5'>
+                                                    <li>Carefully crafted components</li>
+                                                    <li>Amazing page examples</li>
+                                                </ul>
+                                                <button class="button">GET STARTED</button>
+                                            </span>
+                                            <span class="priceimage">
+                                                <image src="price1.png" style="margin-left:12.5%"></image>
+                                                <h3 Class="center text-style4">Enterprise</h3>
+                                                <p class="space center text-style4"><strong>$ 399</strong>/month</p>
+                                                <ul class='check text-style5'>
+                                                    <li>Carefully crafted components</li>
+                                                    <li>Amazing page examples</li>
+                                                </ul>
+                                                <button class="button">GET STARTED</button>
+                                            </span>
+                                        </div>
+                                        <div class="box_newsletter">
+                                            <span class="updatetext"> 
+                                                <h3 Class="space left2 text-style4">Get latest updates!</h3>
+                                                <div class="box-temp text-style5">We never spam your email </div>
+                                            </span>
+                                            <span class="updateletter">
+                                                    <div class="flexContainer" style="width:70%; left:30%">
+                                                        <input type="Emai;" class="inputField" name="Email">
+                                                        <button type="submit" class="signbutton">Submit</button>
+                                                    </div>
+                                            </span>
+                                        </div>
+                                        <div class="box_testimonial">
+                                                <a name="Client"></a>
+                                                <h3 class="center text-style1"> Testimonial</h3>
+                                                <div class="box-text3 center text-style5"> Stop wasting time and money designing and managing a website 
+                                                    that doesn't get results. Happiness guaranteed! </div>
+                                                <span class="testimage">
+                                                    <image src="testi1.png" style="margin-left:25%"></image>
+                                                    <p class="space1 text-style2">Stop wasting time and money designing and
+                                                        managing a website that doesn't get results. Happiness guaranteed! Stop wasting time 
+                                                        and money designing and managing a website that doesn't get results. Happiness guaranteed!  </p>
+                                                        <div class="div_line_top text-style6"> Isabel Moreira</div>
+                                                        <p class="space text-style7">CEO, Graygrids</p>
+                                                </span>
+                                                <span class="testimage">
+                                                    <image src="testi2.png" style="margin-left:25%"></image>
+                                                    <p class="space1 text-style2">Stop wasting time and money designing and
+                                                        managing a website that doesn't get results. Happiness guaranteed! Stop wasting time 
+                                                        and money designing and managing a website that doesn't get results. Happiness guaranteed!  </p>
+                                                        <div class="div_line_top text-style6"> Fiona</div>
+                                                        <p class="space text-style7">Lead Designer, UIdeck</p>
+                                                </span>
+                                                <span class="testimage">
+                                                    <image src="testi3.png" style="margin-left:25%"></image>
+                                                    <p class="space1 text-style2">Stop wasting time and money designing and
+                                                        managing a website that doesn't get results. Happiness guaranteed! Stop wasting time 
+                                                        and money designing and managing a website that doesn't get results. Happiness guaranteed!  </p>
+                                                        <div class="div_line_top text-style6"> Elon Musk</div>
+                                                        <p class="space text-style7">CEO, SpaceX</p>
+                                                </span>
+                                            </div>
+                                            <div class="box-complogo">
+                                                <span class="complogoinline"> <image src="download1.png" style="width:95%; height:95%"></image> </span>
+                                                <span class="complogoinline"> <image src="download2.png" style="width:95%; height:95%"></image></span>
+                                                <span class="complogoinline"> <image src="download3.png" style="width:95%; height:95%"></image> </span>
+                                                <span class="complogoinline"> <image src="download1.png" style="width:95%; height:95%"></image></span>
+                                                <span class="complogoinline"> <image src="download4.png" style="width:95%; height:95%"></image></span>
+                                                <span class="complogoinline"> <image src="download5.png" style="width:95%; height:95%"></image></span>
+                                            </div>
+                                            <div class="box_testimonial">
+                                                    <a name="Contact"></a>
+                                                    <h4 class="center text-style1"> Get in touch</h4>
+                                                    <div class="box-text3 center text-style5"> Stop wasting time and money designing and managing a website 
+                                                        that doesn't get results. Happiness guaranteed! </div>
+                                                    <span class="big3" style="top:0">
+                                                        <div class="box-text4" style="bottom:200px"> 
+                                                            <div class="text-style10" style="margin-left:5%">Lets talk about the project</div>
+                                                            <p class="space2 text-style5">Lorem ipsum dolor sit amet, consectuer adipisicing elit. Ullam unde repellendus
+                                                                delectus facilis quia consequatar maxime perferendis! Sequi, modi consequatar.
+                                                                    <ul class='navlist text-style5'>
+                                                                        <li>Elizabeth St. Melbourne, Australia</li>
+                                                                        <li>+333 789-321-654</li>
+                                                                        <li>hello@ayroui.com</li>
+                                                                    </ul>
+                                                            </p>
+                                                        </div>
+                                                        
+                                                    </span>
+                                                    <span class="big3">
+                                                            <form action="/action_page.php" style="border:0px solid #ccc">
+                                                                <div class="container">
+                                                                  <hr>
+                                                                  <label for="email"><div class="text-style9">Name</div></label>
+                                                                  <input type="text" placeholder="Name" name="name" required>
+                                                              
+                                                                  <label for=""><div class="text-style9">Email</div></label>
+                                                                  <input type="text" placeholder="Email" name="email" required>
+                                                              
+                                                                  <label for="message"><div class="text-style9">Message</div></label>
+                                                                  <input type="message" placeholder="message" name="message">
+                                                                                                               
+                                                                  <div class="clearfix">
+                                                                    <button type="submit" class="signbutton">Submit</button>
+                                                                  </div>
+                                                                </div>
+                                                              </form>
+                                                    </span>
+                                                </div>
+                                                <div class="box-footer">
+                                                    <span class="footercol">
+                                                        <h4 class="text-style11">Company</h4>
+                                                        <p class="text-style2">About</p>
+                                                        <p class="text-style2">Contact</p>
+                                                        <p class="text-style2">Profile</p>
+                                                    </span>
+                                                    <span class="footercol">
+                                                        <h4 class="text-style11">Solutions</h4>
+                                                        <p class="text-style2">Facilities Services</p>
+                                                        <p class="text-style2">Workplace staffing</p>
+                                                        <p class="text-style2">Project Management</p>
+                                                    </span>
+                                                    <span class="footercol">
+                                                        <h4 class="text-style11">Products & Services</h4>
+                                                        <p class="text-style2">Products</p>
+                                                        <p class="text-style2">Business</p>
+                                                        <p class="text-style2">Developer</p>
+                                                    </span>
+                                                    <span class="footercol">
+                                                        <h4 class="text-style11">Help & Support</h4>
+                                                        <p class="text-style2">Support Center</p>
+                                                        <p class="text-style2">FAQ</p>
+                                                        <p class="text-style2">Terms and conditions</p>
+                                                    </span>
+                                                </div>
+                                </div>
+                                
+                        </div>
+            </span>
+        
+    
+        </div>
+            
+            
+        
+        
+    </body>
+</html>
